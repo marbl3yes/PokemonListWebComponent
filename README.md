@@ -1,0 +1,1 @@
+This is a learning project where I try to figure out the best way to develop an application using Vanilla JS and Web Components. The purpose is to try a bit of everything, between routes, data fetching (making use of Poke API) and rerendering.
