@@ -71,26 +71,26 @@ export class PokeList extends HTMLElement {
                 justify-content: center;
                 padding: 1em;
             }
-            
+
             .navigation_button {
                 padding: 1em 1.5em;
                 margin: 0 0.5em;
                 border: none;
                 background-color: lightblue;
             }
-            
+
             .navigation_button:disabled {
                 background-color: #ddd;
             }
-            
+
             .button_previous {
                 border-radius: 1.5em 0 0 1.5em;
             }
-            
+
             .button_next {
                 border-radius: 0 1.5em 1.5em 0;
             }
-            
+
             .list_container {
                 display: flex;
                 align-items: center;
@@ -101,7 +101,7 @@ export class PokeList extends HTMLElement {
                 border: 1px solid lightblue;
                 border-radius: 1em 0 0 1em;
             }
-            
+
             .list_item {
                 padding: 0.3em;
                 text-transform: capitalize;
@@ -147,7 +147,7 @@ export class PokeList extends HTMLElement {
 
   render() {
     if (this.shadowRoot != null) {
-      this.shadowRoot.innerHTML = `${this.style}${this.template}`;
+      this.shadowRoot.innerHTML = `${this.styles}${this.template}`;
     }
   }
 }
