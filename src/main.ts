@@ -3,9 +3,7 @@ import "./style.css";
 
 const size = 20;
 const baseUrl = "https://pokeapi.co/api/v2/pokemon";
-const pokemonList: PokeList = document.getElementById(
-  "pokemon-list",
-) as PokeList;
+const pokemonList = document.getElementById("pokemon-list") as PokeList | null;
 
 async function fetchPokemonList<TResponse>(page: number): Promise<TResponse> {
   const response = await fetch(
@@ -25,5 +23,15 @@ async function fetchPokemonPage(page: number): Promise<PokemonList> {
 }
 
 const data: PokemonList = await fetchPokemonPage(1);
-console.dir(data);
-pokemonList.data = data;
+
+if (pokemonList != null) {
+  pokemonList.data = data;
+
+  pokemonList.addEventListener("page-change", async (event: Event) => {
+    const customEvent = event as CustomEvent<{ page: number }>;
+    const newPage = customEvent.detail.page;
+    const newData = await fetchPokemonPage(newPage);
+    pokemonList.page = newPage;
+    pokemonList.data = newData;
+  });
+}

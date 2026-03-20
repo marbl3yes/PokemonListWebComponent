@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Press+Start+2P&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #0f0f1a;
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  color: #e0e0e0;
 }
 
 a {
@@ -15,16 +19,15 @@ a {
   box-sizing: border-box;
 }
 
-.container {
-  padding: 0 2rem;
-}
-
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(211, 47, 47, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(155, 188, 15, 0.04) 0%, transparent 60%),
+    #0f0f1a;
 }
